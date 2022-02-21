@@ -16,7 +16,7 @@ int main()
     int b[100];
     int j = 0;
     int max;
-    for (int i = 2; i <= a - 2; i++)
+    for (int i = 2; i <= a/2; i++)
     {
         if(check(i) == true && check(a - i) == true){
             b[j] = i * (a - i);
