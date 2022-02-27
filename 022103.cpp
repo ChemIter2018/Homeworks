@@ -16,7 +16,7 @@ int main()
     int b[100];
     int j = 0;
     int max;
-    for (int i = 2; i <= a - 2; i++)
+    for (int i = 2; i <= a / 2; i++)
     {
         if(check(i) == true && check(a - i) == true){
             b[j] = i * (a - i);
@@ -24,10 +24,13 @@ int main()
         }
     }
     max = b[0];
+    cout << b[0] << " ";
     for(int k = 1; k < j; k++)
     {
-         if(b[k] > max) max = b[k];
+        cout << b[k] << " ";
+        if(b[k] > max) max = b[k];
     }
+    cout << endl;
     cout << max;
     return 0;
 }
