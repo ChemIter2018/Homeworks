@@ -11,9 +11,10 @@ int main()
 
     int b, c[6], sum;
     cin >> b;
-    cin >> c[0] >> c[3];
-    cin >> c[1] >> c[4];
-    cin >> c[2] >> c[5];
+    for (int i = 0; i < b; i++)
+    {
+        cin >> c[i] >> c[i + 3];
+    }
 
     for (int i = 0; i < b; i++)
     {

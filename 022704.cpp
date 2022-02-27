@@ -1,9 +1,10 @@
 #include<iostream>
 using namespace std;
+
 int main()
 {
-    int max[5], min[5], count = 0;
-    int a[5][5];
+    int max[5], min[5], a[5][5];
+    int count = 0;
     for(int i=0;i<5;i++){
         for(int j=0;j<5;j++){
             cin >> a[i][j];
@@ -28,7 +29,7 @@ int main()
         for(int j=0;j<5;j++){
             if(a[i][j] == max[i] && a[i][j] == min[j])
             {
-                cout << a[i][j];
+                cout << i + 1 << " " << j + 1 << " " << a[i][j];
                 count++;
             }
         }
