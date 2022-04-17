@@ -38,7 +38,7 @@ int main()
             e = 0;
         }
     }
-    ReInsertSort(c, m);
+    BubbleSort(c, m);
     cout << c[0];
     return 0;
 }
