@@ -5,8 +5,17 @@ using namespace std;
 
 double arctanx(double x)
 {
-    double result;
-    result = x - pow(x, 3)/3.0 + pow(x, 5)/5.0 - pow(x, 7)/7.0;
+    double result = x;
+    double tempValue, n = 3.0;
+    int m = -1;
+    while (true)
+    {
+        tempValue = pow(x, n)/n;
+        result = result + m * tempValue;
+        n += 2;
+        m = m * (-1);
+        if(pow(x, n)/n < 1e-6) break;
+    }
     return result;
 }
 
