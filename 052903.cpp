@@ -8,12 +8,16 @@ int main()
     {
         for(j=1;j<=i-1;j++)
         {
-            cout << " ";
+            cout << " "; //这有个空格
         }
+
         for(j=1;j<=7-2*(i-1);j++)
         {
             cout<<"*";
         }
+
         cout << endl;
     }
 }
+
+打完没问题交卷就行
