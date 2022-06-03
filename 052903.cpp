@@ -19,5 +19,3 @@ int main()
         cout << endl;
     }
 }
-
-打完没问题交卷就行
