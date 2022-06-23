@@ -7,6 +7,9 @@
         "iterator": "cpp",
         "xhash": "cpp",
         "xmemory": "cpp",
-        "xutility": "cpp"
+        "xutility": "cpp",
+        "string": "cpp",
+        "xlocale": "cpp",
+        "ostream": "cpp"
     }
 }
