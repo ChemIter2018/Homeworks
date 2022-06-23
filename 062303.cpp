@@ -42,16 +42,16 @@ int main()
             pop();
             count--;
         }
-        if(Top == 0) break;        
+        if(Top == 0) break;
         b[num] = top();
-        num++;      
+        num++;
         pop();
     }
-    
+
     while(num > 0)
     {
         cout << b[num-1];
         num--;
-    }    
+    }
     return 0;
 }
