@@ -11,7 +11,7 @@ int minSubArrayLen(int val, vector<int>& nums)
     for (int j = 0; j < nums.size(); j++)
     {
         sum += nums[j];
-        while(sum >= val)
+        while (sum >= val)
         {
             subLength = j - i + 1;
             result = result < subLength ? result : subLength;
