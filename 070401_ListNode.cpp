@@ -34,6 +34,21 @@ ListNode* removeElements(ListNode* head, int val)
     return head;
 }
 
+ListNode* reverseList(ListNode* head)
+{
+    ListNode* temp;
+    ListNode* cur = head;
+    ListNode* pre = NULL;
+    while (cur->next != nullptr)
+    {
+        temp = cur->next;
+        cur->next = pre;
+        pre = cur;
+        cur = temp;
+    }
+    return pre;
+}
+
 int main()
 {
     ListNode *head = NULL, *ptemp, *pnew;
@@ -49,7 +64,8 @@ int main()
         ptemp = pnew;
     }
 
-    head = removeElements(head, 6);
+    head = removeElements(head, 0);
+    head = reverseList(head);
     while (head != NULL)
     {
         cout << head->val << " ";
