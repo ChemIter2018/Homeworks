@@ -62,6 +62,15 @@ public:
         order(root, result, depth);
         return result;
     }
+
+    TreeNode* invertTree(TreeNode* root)
+    {
+        if (root == NULL) return root;
+        swap(root->left, root->right);  // 中
+        invertTree(root->left);         // 左
+        invertTree(root->right);        // 右
+        return root;
+    }
 };
 
 int main()
@@ -78,11 +87,22 @@ int main()
     cout << endl;
 
     vector<vector<int>> resultArray = MySoulation->levelOrder(newNode);
-        for (int i = 0; i < resultArray.size(); i++)
+    for (int i = 0; i < resultArray.size(); i++)
     {
         for (int j = 0; j < resultArray[i].size(); j++)
         {
             cout << resultArray[i][j] << " ";
+        }
+        cout << endl;
+    }
+
+    TreeNode* swapNode = MySoulation->invertTree(newNode);
+    vector<vector<int>> resultSwapNode = MySoulation->levelOrder(swapNode);
+    for (int i = 0; i < resultSwapNode.size(); i++)
+    {
+        for (int j = 0; j < resultSwapNode[i].size(); j++)
+        {
+            cout << resultSwapNode[i][j] << " ";
         }
         cout << endl;
     }
