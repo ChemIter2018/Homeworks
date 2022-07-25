@@ -55,7 +55,9 @@ vector< vector<int> > generateMatrix(int n)
 
 int main()
 {
-    int n = 5;
+    //int n = 5;
+    int n;
+    cin >> n;
     vector< vector<int> > result = generateMatrix(n);
     for (int i = 0; i < n; i++)
     {
