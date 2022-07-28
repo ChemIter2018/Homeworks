@@ -21,6 +21,7 @@
         "*.tcc": "cpp",
         "functional": "cpp",
         "utility": "cpp",
-        "random": "cpp"
+        "random": "cpp",
+        "iomanip": "cpp"
     }
 }
